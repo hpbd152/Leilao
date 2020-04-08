@@ -1,0 +1,23 @@
+Primeiramente instale Composer e NodeJs em sua máquina:
+Composer: https://getcomposer.org/download/
+NodeJs: https://nodejs.org/en/download/
+
+Logo após crie um banco de dados MySql com o nome: "leilao_totvs" 
+do tipo utf8_unicode_ci
+
+Depois, rode os seguintes comandos console:
+   Para o Laravel:
+    - Composer install
+    - cp .env.example .env
+    - php artisan key:generate
+    - php artisan jwt:secret
+    - php artisan migrate
+    - php artisan db:seed
+    - php artisan serve
+
+   Para o VueJs:
+    - cd vue
+    - npm install
+    - npm run serve
+
+Acesse http://localhost:8080/ para utilizar o sistema
