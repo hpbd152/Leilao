@@ -17,7 +17,7 @@ class Leilao extends Model
     protected $table = 'leilao';
 
     protected $fillable = [
-       'titulo','descricao','valor_inicial','condicao','lance_vencedor','usado','url_foto','user_id','ativo'
+       'titulo','descricao','valor_inicial','condicao','lance_vencedor','usado','url_foto','user_id','ativo','data_finalizacao'
     ];
 
     public function cadastra($request, $user_id) : Array
@@ -31,7 +31,8 @@ class Leilao extends Model
             'lance_vencedor' => $request['valor_inicial'],
             'condicao' => $request['condicao'],
             'url_foto' => $request['url_foto'],
-            'user_id' => $user_id
+            'user_id' => $user_id,
+            'data_finalizacao' => date("Y-m-d H:i:s", strtotime ('+15 days', time ()))
         ]);
 
         if($leilao_cadastrado){

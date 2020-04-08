@@ -19,7 +19,10 @@ class LeilaoController extends Controller
         $user = $controll->getUserByToken();
         if($user != 'error'){
 
-            $leilao = DB::table('leilao')->where('ativo', '=', 1)->get();
+            $agora = date("Y-m-d H:i:s");
+
+            $leilao = DB::table('leilao')->where('data_finalizacao', '>', $agora)
+            ->where('ativo', '=', 1)->get();
 
             return response()->json($leilao);
         }

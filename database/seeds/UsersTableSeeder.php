@@ -38,6 +38,7 @@ class UsersTableSeeder extends Seeder
             'condicao' => 'Novo',
             'url_foto' => 'https://i2.wp.com/www.reviewbox.com.br/wp-content/uploads/2019/06/playstation-4.jpg?resize=1024%2C683&ssl=1',
             'user_id' => $user_default->id,
+            'data_finalizacao' => date("Y-m-d H:i:s", strtotime ('+15 days', time ()))
         ]);
 
         Leilao::create([
@@ -48,6 +49,7 @@ class UsersTableSeeder extends Seeder
             'condicao' => 'Novo',
             'url_foto' => 'https://www.leiloeirosp.com.br/leiloes/lotes/imagens/547f6b50f19fd.jpg',
             'user_id' => $user_default->id,
+            'data_finalizacao' => date("Y-m-d H:i:s", strtotime ('+15 days', time ()))
         ]);
 
         Leilao::create([
@@ -58,6 +60,7 @@ class UsersTableSeeder extends Seeder
             'condicao' => 'Usado',
             'url_foto' => 'https://img.olx.com.br/images/57/576918085515696.jpg',
             'user_id' => $user_default->id,
+            'data_finalizacao' => date("Y-m-d H:i:s", strtotime ('+15 days', time ()))
         ]);
 
         Leilao::create([
@@ -68,6 +71,7 @@ class UsersTableSeeder extends Seeder
             'condicao' => 'Usado',
             'url_foto' => 'https://img.olx.com.br/images/18/188026010834208.jpg',
             'user_id' => $user_default->id,
+            'data_finalizacao' => date("Y-m-d H:i:s", strtotime ('+15 days', time ()))
         ]);
 
         Leilao::create([
@@ -78,6 +82,7 @@ class UsersTableSeeder extends Seeder
             'condicao' => 'Usado',
             'url_foto' => 'https://ucegamers.com.br/siteuceg/wp-content/uploads/2017/05/boxarten.jpg',
             'user_id' => $user_default->id,
+            'data_finalizacao' => date("Y-m-d H:i:s", strtotime ('+15 days', time ()))
         ]);
 
         Leilao::create([
@@ -88,6 +93,7 @@ class UsersTableSeeder extends Seeder
             'condicao' => 'Usado',
             'url_foto' => 'https://s2.glbimg.com/slaVZgTF5Nz8RWqGrHRJf0H1PMQ=/0x0:800x450/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2019/U/e/NTegqdSe6SoBAoQDjKZA/cachorro.jpg',
             'user_id' => $user_default->id,
+            'data_finalizacao' => date("Y-m-d H:i:s", strtotime ('+15 days', time ()))
         ]);
 
 

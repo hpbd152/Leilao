@@ -87,7 +87,7 @@
                 <v-text-field background-color='white' readonly outline hide-details required="" v-model="item_selecionado.condicao" label="Condição"></v-text-field>
               </v-flex>
               <v-flex xs4>
-                <v-text-field background-color='white' readonly outline hide-details required="" v-model="item_selecionado.data_abertura" label="Data de Início"></v-text-field>
+                <v-text-field background-color='white' readonly outline hide-details required="" v-model="computedDate" label="Data de Fim"></v-text-field>
               </v-flex>
               <v-flex xs12>
                 <v-textarea auto-grow background-color='white' readonly outline hide-details required="" v-model="item_selecionado.descricao" label="Descrição do Leilão"></v-textarea>
@@ -324,6 +324,19 @@
             }
           }
         else return 'R$ 0,00';
+      },
+
+      computedDate(){
+
+        if (!this.item_selecionado.data_finalizacao)
+          return null
+        if(this.item_selecionado.data_finalizacao == null)
+          return null
+
+        const [year, month, dayHours] = this.item_selecionado.data_finalizacao.split('-')
+        const [day, hours] = dayHours.split(' ')
+
+        return `${day}/${month}/${year} ${hours.substring(0,5)}`
       },
  
       getNome(){

@@ -22,9 +22,10 @@ class CreateLeilaoTable extends Migration {
 			$table->float('lance_vencedor', 9)->nullable();
 			$table->string('condicao',191);
 			$table->integer('user_id')->unsigned()->index('leilao_ibfk_1');
-			$table->timestamp('data_abertura')->default(DB::raw('CURRENT_TIMESTAMP'));
-			$table->text('url_foto')->nullable();
 			$table->boolean('ativo')->default(1);
+			$table->timestamp('data_abertura')->default(DB::raw('CURRENT_TIMESTAMP'));
+			$table->timestamp('data_finalizacao');
+			$table->text('url_foto')->nullable();
 			
 		});
 	}
